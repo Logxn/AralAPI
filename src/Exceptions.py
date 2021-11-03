@@ -1,0 +1,1 @@
+UnknownPostalCodeException = Exception('Error: We failed to retreive coordinates to your provided postal code!')
