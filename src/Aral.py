@@ -46,3 +46,15 @@ class Aral:
 		gas_station = Station(r.json()[0])
 		return gas_station
 
+	def get_station_by_id(self, station_id):
+		request_url = self.base_url + str(station_id)
+
+		r = requests.get(request_url)
+
+		if r.status_code != 200:
+			raise SystemExit(InvalidStationIdException)
+
+		gas_station = Station(r.json())
+		return gas_station
+
+
